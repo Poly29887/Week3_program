@@ -9,8 +9,8 @@ int main()
 	scanf("%d",&num2);
 	if(num1<num2)
 	{ 
-	 for (i = num1; i <= num2; i++)
-	 { 
+	  for (i = num1; i <= num2; i++)
+	  { 
 		 count = 0;
 		for (j = 1; j <= i; j++)
 		{
@@ -28,31 +28,30 @@ int main()
 			printf("%d ",i);
 	    }
 
-	 }
+	  }
 	}
 	else
-		if (num1 > num2)
+	{
+		for (i = num2; i <= num1; i++)
 		{
-			for (i = num2; i <= num1; i++)
+			count = 0;
+			for (j = 1; j <= i; j++)
 			{
-				count = 0;
-				for (j = 1; j <= i; j++)
+				if (i % j == 0)
 				{
-					if (i % j == 0)
-					{
 						count++;
-					}
 				}
-				if (i == num2)
-				{
-					printf("The prime number between %d and %d are :\n", num1, num2);
-				}
-				if (count == 2)
-				{
-					printf("%d ", i);
-				}
-
 			}
+			if (i == num2)
+			{
+				printf("The prime number between %d and %d are :\n", num1, num2);
+			}
+			if (count == 2)
+			{
+				printf("%d ", i);
+			}
+
 		}
+	}
 	printf("\n");
 }
